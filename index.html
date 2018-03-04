@@ -1,0 +1,121 @@
+---
+layout: default
+---
+<section class="hero is-large  is-bold has-text-centered has-bg-img">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title is-1 has-text-white">
+          Amau Medicina
+        </h1> 
+        <h2 class="subtitle is-3 has-text-white" >
+          Medicina de Corazon a Corazon 
+        </h2>
+      </div>
+    </div>
+</section>
+<section id="calendar" class="section">
+  <div class="container">
+    <h1 class="title">Calendario {{ site.time | date: '%Y' }}</h1>
+    <h2 class="subtitle">
+     Ultima actualizacion fue {{ site.time | date: '%d de %b %Y' }}
+    </h2>
+  </div>
+  <br/>
+<div class="div-table" style="background-color:light-grey" >
+  {% for entry in site.data.schedule %}
+    {% assign mod = forloop.index | modulo: 2 %}
+    {% if mod == 0 %}
+        <!-- even -->    <div class="columns is-1" style="background-color:beige" >
+    {% else %}
+        <!-- odd -->    <div class="columns is-1" style="background-color:mistyrose" >
+    {% endif %}
+      <div class="column has-text-centered has-text-weight-bold">{{ entry.date }} </div>
+      <div class="column has-text-centered is-hidden-mobile"> {{ entry.format }}	</div>
+      <div class="column has-text-centered">{{ entry.location }}</div>
+    </div>
+  {% endfor %}
+</div>
+
+</section>
+
+<section id="music" class="section">
+    <div class="container">
+      <h1 class="title">Musica</h1>
+      
+        <div class="columns">
+            
+            <div class="column">
+                <h2 class="subtitle">
+                    Musica de Amau Medicina en soundcloud.com
+                  </h2>
+                <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/284559330&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+            </div>
+            <div class="column">
+              
+                  <h2 class="subtitle">
+                      Musica de Amau Medicina para bajar
+                    </h2>
+                    <div class="content">
+              <ul>
+              <li>  
+                  2018 -&nbsp; 27 de Enero - Angol - <a href="https://www.dropbox.com/sh/o1znzhoqn2c3cdd/AAA1O-HkMDNejXkChbD8b-nWa?dl=0">Descarga Aqui</a><br>
+              </li>
+              <li>
+                  2018 - 7 de Enero - Temuco - <a href="https://www.dropbox.com/sh/odxxov5s4z2xbwv/AAAhBA96gHKogdkaBB9jSsUqa?dl=0">Descarga Aqui</a>&nbsp;
+              </li>
+              <li>
+                  2017 - 18 de Sept - Retiro Pucon&nbsp; -&nbsp;     <a href="https://www.dropbox.com/sh/qd4wf525vp592yv/AACJZ6eJ0l-rXtdcYU-QOAI5a?dl=0">Descarga Aqui</a>&nbsp;
+              </li>
+              <li>
+                  2017 - 5 de Mayo - Pucon Ceremonia - <a href="https://www.dropbox.com/sh/ym9gxmdzl68sinw/AAAIejqjIktg5J6sVPIm1BBfa?dl=0">Descarga Aqui</a> 
+              </li>
+          </ul>
+
+        </div>
+
+       
+        </div>
+        
+         </div>
+    
+ </section> 
+<section id="photos" class="section">
+    <div class="container">
+      <h1 class="title">Fotos</h1>
+      <h2 class="subtitle">
+        Unas fotos de Amau Medicina
+      </h2>
+
+      <div class="columns is-multiline">
+          {% assign image_files = site.static_files | where: "image", true %}
+
+          {% for myimage in image_files %}
+          <div class="column">
+              <figure class="image is-3by2">
+                  <img src="{{ myimage.path }}" alt="{{ myimage.basename }}">
+                </figure>
+          </div>
+        {% endfor %}
+       </div>
+     
+</section> 
+<section id="videos" class="section">
+    <div class="container">
+      <h1 class="title">Videos</h1>
+      <h2 class="subtitle">
+        Unos videos de Amau Medicina
+      </h2>
+      <div class="columns">
+          <div class="column">
+              <!-- <youtube :video-id="video1"></youtube> -->
+              <iframe width="100%" height="315" src="https://youtube.com/embed/kwVADnvYaDM" allowfullscreen></iframe>
+          </div>
+          <div class="column">
+              <!-- <youtube :video-id="video2"></youtube> -->
+              <iframe width="100%" height="315" src="https://youtube.com/embed/ZIQ5ZY4sOq4" allowfullscreen></iframe>
+          </div>
+     </div>
+    </div>
+</section> 
+ 
+
