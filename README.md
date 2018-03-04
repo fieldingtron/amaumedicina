@@ -1,2 +1,0 @@
-# amaumedicina
-website for amaumedicina !!
