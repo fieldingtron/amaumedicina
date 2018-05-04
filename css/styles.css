@@ -1,3 +1,7 @@
 .has-bg-img {
   background: url("/images/eagle-abuela.jpg") center center;
   background-size: cover; }
+
+.text_shadow {
+      text-shadow: 2px 2px 4px #000000;
+}
