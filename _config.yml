@@ -18,7 +18,11 @@ email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Medicina de Corazon a Corazon
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://amaumedicina.com"
+url: "https://amaumedicina.com"
+
+collections:
+  musica:
+   output: true
 
 defaults:
   - scope:

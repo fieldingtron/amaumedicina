@@ -76,6 +76,14 @@ layout: default
             </li>
           </ul>
 
+        <h2> Canciones en Youtube </h2>
+        <ul>
+        {% for song in site.musica %}
+          <li><a href="{{ song.url }}">{{ song.title }}</a> - {{ song.date | date: '%d de %b %Y' }}</li>
+        {% endfor %}
+        </ul>
+    
+
         </div>
 
 
