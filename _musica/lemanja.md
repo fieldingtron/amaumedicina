@@ -4,6 +4,7 @@ date: 2018-08-22
 layout: musica
 youtube_id: 9sYu4prdtiQ
 info: "Canto recibido em 2017 em Sambaqui, Florianópolis, SC. Traz a força e o balanço do mar..."
+youtube_learn: youtu.be/4KK5IWLMtAU
 ---
 Eu vou cantar 
 
