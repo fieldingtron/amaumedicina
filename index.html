@@ -78,7 +78,8 @@ layout: default
 
         <h2> Canciones en Youtube </h2>
         <ul>
-        {% for song in site.musica %}
+        {% assign sorted = (site.musica | sort: 'date') | reverse %}
+        {% for song in sorted %}
           <li><a href="{{ song.url }}">{{ song.title }}</a> - {{ song.date | date: '%d de %b %Y' }}</li>
         {% endfor %}
         </ul>
