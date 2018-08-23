@@ -7,17 +7,15 @@
 	<div class="container">
 		<div class="columns">
 			<div class="column">
-				<h2 class="title h2">{{ page.title }}</h2>
-					<p class="subtitle">{{ page.date | date: '%d de %b %Y' }}</p>
-					{{ content }} 
-			</div>
-			<div class="column">
 					<div class="video-container">
 							<iframe width="640" height="360" src="//www.youtube.com/embed/{{ page.youtube_id }}" frameborder="0" allowfullscreen></iframe>
 					</div>
 					{{ page.info }}  					{{ page.title }}
-
-
+			</div>
+			<div class="column">
+				<h2 class="title h2">{{ page.title }}</h2>
+					<p class="subtitle">{{ page.date | date: '%d de %b %Y' }}</p>
+					{{ content }} 
 			</div>
 		</div>
 	</div>
